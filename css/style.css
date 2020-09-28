@@ -392,13 +392,14 @@ body {
 
 /* about section */
 #about {
+  font-size: 10px;
   background-color: white;
 }
 
 .empty {
   background-color: transparent;
   width: 100%;
-  height: 700px;
+  height: 700     px;
 }
 
 *, *::after, *::before {
@@ -1345,7 +1346,7 @@ body {
 
 .image_about {
   margin-left: 100px;
-  height: 750px;
+  height: 700px;
   width: 600px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,9 +2,8 @@
 @import"./variables";
 @import"./skills";
 @import"./welcome";
+
 body{
-
-
   color: $textcolor;
   font-family: $fontfam ;
   font-size: $fontsizebig;
@@ -15,6 +14,6 @@ body{
 
 .image_about{
 margin-left: 100px;
-height: 750px;
+height: 700px;
 width: 600px;
 }
