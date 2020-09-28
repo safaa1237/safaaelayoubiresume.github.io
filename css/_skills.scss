@@ -1,13 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import"./variables";
 
-$profileBg:#fff;
-$skillsBg:#3d3e42;
-$profileColor:#9099a0;
-$skillsColor:#9099a0; 
-$linkColor:#66cc99;
-$boldColor:#4a4e51;
-$time:0.6s;
 
  
 @mixin breakpoint($point) {
@@ -178,10 +172,15 @@ $time:0.6s;
  @include breakpoint(baby-bear) { padding:40px 10% 20px 5%; }
 }
 
-.section-wrapper {
-  width:50%;
+#about1{
+  background-color: white;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
+}
+.section-wrapper1 {
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
   text-align:left;
   color:$skillsColor;
   font-weight:300;
@@ -217,7 +216,63 @@ $time:0.6s;
     &::before{
       content:"";
       height:25px;
-      background:$linkColor;
+      background:$navbackgroundcolortext;
+      position:absolute;
+      margin-top:3px;
+      bottom:0;
+    }
+    &:nth-child(1)::before {width:80%;animation: skill_1 $time ease;}
+    &:nth-child(2)::before {width:90%; animation: skill_2 $time ease;} 
+    &:nth-child(3)::before {width:50%;animation: skill_3 $time ease;}
+    &:nth-child(4)::before {width:60%;animation: skill_4 $time ease;}
+    &:nth-child(5)::before {width:70%;animation: skill_5 $time ease;}
+    &:nth-child(6)::before {width:70%;animation: skill_6 $time ease;}
+    &:nth-child(7)::before {width:70%;animation: skill_6 $time ease;}
+  }
+  
+}
+
+
+.section-wrapper2 {
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+  text-align:left;
+  color:$skillsColor;
+  font-weight:300;
+  margin-bottom:20px;
+  @include breakpoint(baby-bear) {width:100%;}
+  &:nth-child(3){ 
+    padding-right:8%;
+  }
+  h3.section-title {
+    color:$linkColor;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+    font-weight:400;
+  }
+  .skill-percentage {
+    font-size: 20px;
+    color: black;
+    margin-bottom:10px;
+    position:relative;
+    &::after {
+      content:"";
+      width:100%;
+      height:25px;
+      font-size: 20px;
+      background:$boldColor;
+      display:block;
+      margin-top:3px;
+    }
+    &::before{
+      content:"";
+      height:25px;
+      background:$navbackgroundcolortext;
       position:absolute;
       margin-top:3px;
       bottom:0;
@@ -240,3 +295,16 @@ $time:0.6s;
 @keyframes skill_5 {from {width:0%;}to {width:70%;}}  
 @keyframes skill_6 {from {width:0%;}to {width:70%;}}
 @keyframes skill_7 {from {width:0%;}to {width:70%;}}
+
+@media(min-width: 700px) {
+  .section-wrapper2{
+    width: 30%;
+    float: left;
+    margin-left: 10%;
+  }
+  .section-wrapper1{
+    width: 30%;
+    float: right;
+    margin-right: 10%;
+  }
+}
