@@ -31,7 +31,7 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
+    color:$navbackgroundcolortext;
     font-size: 2.5rem;
 }
 
@@ -63,7 +63,7 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: $navbackgroundcolortext;
     line-height: 65px;
     font-size: 2.4rem;
 }
@@ -73,26 +73,6 @@ body {
 }
 
 
-/* Home section */
-
-.home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
-    background-position: center top;
-	background-size:cover;
-}
-
-.navTrigger {
-    display: none;
-}
-
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
 
 
 /* Media qurey section */
@@ -133,6 +113,7 @@ body {
     .nav div.main_list ul li {
         width: 100%;
         text-align: right;
+        color: #34bad1;
     }
     .nav div.main_list ul li a {
         text-align: center;
@@ -161,11 +142,12 @@ body {
 }
 
 .navTrigger i {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 2px;
     content: '';
     display: block;
     width: 100%;
+    margin: 3px;
     height: 4px;
 }
 
@@ -177,7 +159,7 @@ body {
 }
 
 .navTrigger i:nth-child(2) {
-    margin: 5px 0;
+    margin: 8   px 0;
     -webkit-animation: outM 0.8s backwards;
     animation: outM 0.8s backwards;
     -webkit-animation-direction: reverse;
@@ -339,27 +321,57 @@ body {
 }
 
 .affix {
-    padding: 0;
+    padding: 0%;
     background-color: $navbackgroundcolor;
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,.2);
 }
 
-
-
-
-
-
-.myH2 {
-	text-align:center;
-	font-size: 4rem;
-}
-.myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
-}
 @media all and (max-width:700px){
 	.myP {
 		padding:2%;
 	}
+}
+
+/*images used */
+.img1 { background-image: url("../img/home.jpg"); }
+.img2 { background-image: url("../img/home.jpg"); }
+.img3 { background-image: url("../img/home.jpg"); }
+.img4 { background-image: url("../img/home.jpg"); }
+
+/* Home section */
+
+.bg-image {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-position: center top;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+/* about section */
+#about{ 
+
+    background-color: white;
+
+}
+.empty{
+    background-color: transparent;
+    width: 100%;
+    height: 700px;
 }

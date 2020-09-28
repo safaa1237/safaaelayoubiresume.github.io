@@ -1,12 +1,20 @@
 @import"./navbar";
 @import"./variables";
-
-
+@import"./skills";
+@import"./welcome";
 body{
 
 
   color: $textcolor;
   font-family: $fontfam ;
   font-size: $fontsizebig;
+  height: 100%;
+  color: #777;
+  line-height: 1.8; 
+}
 
+.image_about{
+margin-left: 100px;
+height: 750px;
+width: 600px;
 }
