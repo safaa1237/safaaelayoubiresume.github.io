@@ -1,4 +1,6 @@
 
+//changing nav bar
+
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
         $('.nav').addClass('affix');
@@ -9,6 +11,7 @@ $(window).scroll(function() {
 });
 
 
+//animated name
 
 const curry = f => (...args) => args.length >= f.length ? f(...args) : curry(f.bind(f, ...args));
 
@@ -20,38 +23,39 @@ const composeN = (...fns) => (...args) => fns.reverse().reduce((x, f) => f.apply
 
 // Skills
 
-var select = function(s) {
-    return document.querySelector(s);
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
   }
   
-  function randomBetween(min,max)
-  {
-      var number = Math.floor(Math.random()*(max-min+1)+min);
-    
-      if ( number !== 0 ){
-        return number;
-      }else {
-        return 0.5;
-      }
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
   }
   
-  var tl = new TimelineMax();
+  var slideIndex = 1;
+  showSlides(slideIndex);
   
-  for(var i = 0; i < 20; i++){
-  
-    var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
-      x: randomBetween(12, 15) * (randomBetween(-1, 1)),
-      y: randomBetween(12, 15) * (randomBetween(-1, 1)), 
-      repeat:-1,
-      repeatDelay:randomBetween(0.2, 0.5),
-      yoyo:true,
-      ease:Elastic.easeOut.config(1, 0.5)
-    })
-  
-    tl.add(t, (i+1)/0.6)
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
   
-  tl.seek(50);
-
-
-
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }

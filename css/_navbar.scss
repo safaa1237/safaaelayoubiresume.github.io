@@ -321,6 +321,7 @@ body {
 }
 
 .affix {
+    z-index: 1 ;
     padding: 0%;
     background-color: $navbackgroundcolor;
     box-shadow: 0 2px 5px -2px rgba(0,0,0,.2);
@@ -374,5 +375,5 @@ body {
 .empty{
     background-color: transparent;
     width: 100%;
-    height: 700     px;
+    height: 700px;
 }

@@ -338,6 +338,7 @@ body {
 }
 
 .affix {
+  z-index: 1;
   padding: 0%;
   background-color: white;
   -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.2);
@@ -399,7 +400,7 @@ body {
 .empty {
   background-color: transparent;
   width: 100%;
-  height: 700     px;
+  height: 700px;
 }
 
 *, *::after, *::before {
@@ -667,17 +668,6 @@ body {
   padding-right: 8%;
 }
 
-.section-wrapper1 h3.section-title {
-  color: #187a8b;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
 .section-wrapper1 .skill-percentage {
   font-size: 20px;
   color: black;
@@ -746,6 +736,15 @@ body {
           animation: skill_6 0.6s ease;
 }
 
+h3 {
+  margin-left: auto;
+  margin-right: auto;
+  color: #187a8b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .section-wrapper2 {
   margin-left: auto;
   margin-right: auto;
@@ -764,17 +763,6 @@ body {
 
 .section-wrapper2:nth-child(3) {
   padding-right: 8%;
-}
-
-.section-wrapper2 h3.section-title {
-  color: #187a8b;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  font-weight: 400;
 }
 
 .section-wrapper2 .skill-percentage {
@@ -973,7 +961,7 @@ body {
 
 @media (min-width: 700px) {
   .section-wrapper2 {
-    width: 30%;
+    width: 38%;
     float: left;
     margin-left: 10%;
   }
@@ -1451,6 +1439,147 @@ body {
 
 .empty1 {
   height: 320px;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.column img {
+  width: 100%;
+  height: 500px;
 }
 
 body {
