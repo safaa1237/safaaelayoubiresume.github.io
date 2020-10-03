@@ -1670,4 +1670,9 @@ body {
   height: 700px;
   width: 600px;
 }
+
+#footer {
+  color: aqua;
+  background-color: #67bbbb;
+}
 /*# sourceMappingURL=style.css.map */
