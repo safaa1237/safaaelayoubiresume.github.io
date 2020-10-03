@@ -3,6 +3,7 @@
 @import"./skills";
 @import"./welcome";
 @import "./album";
+@import"./experience";
 body{
   color: $textcolor;
   font-family: $fontfam ;
@@ -15,5 +16,6 @@ body{
 .image_about{
 margin-left: 100px;
 height: 700px;
-width: 600px;
+width:600px;
 }
+

@@ -1,0 +1,47 @@
+
+@import"./variables";
+
+
+.experience {
+ padding-top: 5%;
+  color: black;
+  width:100%;
+  font-size: 20px;
+  font-weight:300;
+  @include breakpoint(brother-bear) { width: 100%; } 
+
+  h3.experience-title {
+    color:$linkColor;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:1.2em;
+    margin-bottom:20px;
+    font-weight:400;
+  }
+  .company-wrapper {
+    width:30%;
+    float:left;
+    text-align:left;
+    padding-right:5%;
+    margin-bottom:60px;
+    @include breakpoint(baby-bear) {width:100%; margin-bottom:20px;} 
+  }
+  .job-wrapper {
+    width:70%;
+    float:left;
+    text-align:left;
+    padding-right:5%;
+    margin-bottom:60px;
+    @include breakpoint(baby-bear) {width:100%;margin-bottom:40px;} 
+  }
+  .experience-title {
+    font-size: 25px;
+      margin-bottom:15px;;
+    }
+}
+
+.section-padding {
+ padding:60px 60px 40px 40px;
+ @include breakpoint(brother-bear) { padding:80px 15% 40px 10%; }
+ @include breakpoint(baby-bear) { padding:40px 10% 20px 5%; }
+}
