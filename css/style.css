@@ -977,7 +977,6 @@ h3 {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1674,5 +1673,35 @@ body {
 #footer {
   color: aqua;
   background-color: #67bbbb;
+}
+
+@media (max-width: 900px) {
+  #about {
+    width: 100%;
+  }
+  #img1 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image_about {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #img2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #about1 {
+    margin-left: 5%;
+    width: 90%;
+  }
+  .column {
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
